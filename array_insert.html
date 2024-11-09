@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insert Element in Array</title>
+
+</head>
+<body>
+
+  <input type="text" id="position" placeholder="enter position">
+  <input type="text" id="newEl" placeholder="enter new element">
+  <button onclick="insertEl()">Insert</button>
+  
+</body>
+<script>
+        
+        // let number = [60, 30, 20, 40, 80];
+        // let newEl = 50;
+        // let position = 2;
+   
+        //  console.warn(number)
+
+        //  for (let i = number.length-1; i >=0 ; i--) {
+            
+        //       if ( i >= position){
+        //            number[i+1] = number[i];
+        //             if(i==position) {
+        //                number[i]=newEl
+        //             }
+        //       }         
+        //  }
+        //  console.warn(number);
+
+        function insertEl() {
+          let number = [60, 30, 20, 40, 80];
+        let newEl = document.getElementById('newEl').value;
+          newEl = parseInt(newEl)
+        let position = document.getElementById('position').value;;
+   
+         console.warn(number)
+
+         for (let i = number.length-1; i >=0 ; i--) {
+            
+              if ( i >= position){
+                   number[i+1] = number[i];
+                    if(i==position) {
+                       number[i]=newEl
+                    }
+              }         
+         }  
+         console.warn(number)
+
+        }
+
+
+        //splice method is used to insert element in array
+             // number.splice(2,0,100)
+
+
+</script>
+</html>
